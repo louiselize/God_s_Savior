@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/EnnemyHurted.mp3-43429495eff161f0a3672551724c3967.mp3str"
+
+[deps]
+
+source_file="res://Musics_and_Sounds/EnnemyHurted.mp3"
+dest_files=[ "res://.import/EnnemyHurted.mp3-43429495eff161f0a3672551724c3967.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

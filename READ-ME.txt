@@ -1,0 +1,26 @@
+Thank you for downloading the beta version of God's Savior. This game is part of our project for the ICO6 university course.
+
+God's Savior is an action-adventure game heavily inspired by 2D Zelda games, set in a world inspired by ancient times and Greek mythology.
+
+Instructions:
+
+Open the God's Savior V1.4 file, then the IC06_project file, and launch the God's Savior executable.
+The game will start and you can begin testing!
+
+
+
+Controls:
+
+Use the arrow keys or ZQSD keys to move.
+Use the space bar to attack.
+Use the E key to interact.
+Use the A key to use a special ability.
+
+
+
+
+Known bugs:
+
+Hitbox issue in the first world where the player can get stuck for no apparent reason.
+Dialogue problem with the boss where a verb is missing.
+Issue where the player attacks to the left when the animation indicates to the right."

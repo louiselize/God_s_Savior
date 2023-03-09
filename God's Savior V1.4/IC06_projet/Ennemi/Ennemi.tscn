@@ -1,0 +1,77 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Ennemi/Ennemi.gd" type="Script" id=1]
+[ext_resource path="res://Ennemi/Monstre esprit.png" type="Texture" id=2]
+[ext_resource path="res://Common/Stats.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Ennemi/Hurtbox.gd" type="Script" id=4]
+[ext_resource path="res://Ennemi/Detection.gd" type="Script" id=5]
+[ext_resource path="res://HitboxAndHurtbox/Hitbox.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Musics_and_Sounds/EnnemyHurted.mp3" type="AudioStream" id=7]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 7.0
+height = 0.0
+
+[sub_resource type="CapsuleShape2D" id=2]
+height = 0.0
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 77.026
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 12, 10 )
+
+[node name="Ennemi" type="KinematicBody2D"]
+collision_layer = 0
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 2 )
+rotation = 1.5708
+shape = SubResource( 1 )
+
+[node name="Hurtbox" type="Area2D" parent="."]
+position = Vector2( 13, 35 )
+collision_layer = 0
+collision_mask = 8
+script = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+position = Vector2( -13, -35 )
+rotation = 1.5708
+shape = SubResource( 2 )
+
+[node name="Detection" type="Area2D" parent="."]
+visible = false
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 5 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detection"]
+shape = SubResource( 3 )
+
+[node name="Stats" parent="." instance=ExtResource( 3 )]
+
+[node name="Hitbox" parent="." instance=ExtResource( 6 )]
+visible = false
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" parent="Hitbox" index="0"]
+shape = SubResource( 4 )
+
+[node name="Hurt" type="AudioStreamPlayer2D" parent="."]
+visible = false
+stream = ExtResource( 7 )
+
+[connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
+[connection signal="area_entered" from="Detection" to="Detection" method="_on_Detection_area_entered"]
+[connection signal="body_entered" from="Detection" to="Detection" method="_on_Detection_body_entered"]
+[connection signal="body_exited" from="Detection" to="Detection" method="_on_Detection_body_exited"]
+[connection signal="body_shape_exited" from="Detection" to="Detection" method="_on_Detection_body_shape_exited"]
+[connection signal="no_health" from="Stats" to="." method="_on_Stats_no_health"]
+
+[editable path="Hitbox"]

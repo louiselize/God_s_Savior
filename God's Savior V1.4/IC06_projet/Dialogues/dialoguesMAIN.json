@@ -1,0 +1,42 @@
+{
+"acte0":[{
+"Chef" :["Merci beaucoup d'avoir accepté cette quête","Sache que tout le village est avec toi"],
+"Forgeron" : [ "Je suis à cours de matière premières !","J’aurais vraiment aimé pouvoir te forger la meilleur épée de tout le village"],
+"Chasseur1" : ["C’est horrible !","Moi qui pensais que cela ne pouvait arriver que dans mes pires cauchemars"],
+"Chasseur2" : ["*a faim*"],
+"Chasseur3" : ["Oh ! C’est toi qui va tous nous sauver ?!","Tu es bien courageux.","Petit conseil : ….","Rhaaa non tu as raison, il n’y a qu’en pêche que je suis expert !"],
+"Bucheron" : ["Je n’ose plus aller dans la forêt luxuriante à présent.","Moi ? Avoir peur ?","Tu te trompes de personne mon petit."],
+"Papa" : ["Fais bien attention à toi."],
+"Maman" : ["Papa ne te l’a sûrement pas dit, mais fais attention à toi surtout !"]  
+}],
+"acte1":[{
+"Chef" :["Oh ! Ca y est ? Tu as réussi ?","Félicitations ! C’est incroyable que tu aies réussi si vite !","Oh ! Je vois qu’Artémis t’a donné son anneau du chasseur !","C’est super : Il parait que cela confère un grand pouvoir !","Jadis, nous avions aussi des anneaux au village. Ils étaient disposés au niveau de l’autel du village."],
+"Forgeron" : [ "Super ! Nous avons de nouveau accès au bois !","Il nous faudra à présent retourner à la montagne si tu souhaites toujours recevoir ta future épée.","Je n’ai plus de fer !"],
+"Chasseur1" : ["Merci ! Je devrais mieux dormir cette nuit"],
+"Chasseur2" : ["*a encore faim*"],
+"Chasseur3" : ["Je savais que tu allais t’en sortir !","Finalement, tu n’avais pas besoin de conseils :D"],
+"Bucheron" : ["Attends, je peux retourner dans la forêt luxuriante ?!??","Non pas que j’en avais peur, non non..."],
+"Papa" : ["[], nous sommes tous très fiers de toi.", "Tu devrais aller voir notre chef, je pense qu’il saura te récompenser."],
+"Maman" : ["Tu as réussi ?!", "C’est super ! "]  
+}],
+"acte2":[{
+"Chef" :["Heureusement que tu es là.","Sans toi, je ne sais pas comment nous aurions fait.","Et ce n’est pas fini..."],
+"Forgeron" : [ "Si tu savais comme mes épées sont bonnes.","On dit qu’elles sont meilleures que les armes divines"],
+"Chasseur1" : ["Depuis que ces créatures sont arrivées, nous n’avons pas pêché un seul poisson."],
+"Chasseur2" : ["*a toujours faim*"],
+"Chasseur3" : ["C'est peut être moi qui aurait besoin de conseils..."],
+"Bucheron" : ["*chop chop*","*est occupé*","*chop chop*"],
+"Papa" : ["Que d’aventures !", "Quand est-ce que tu te reposes ?"],
+"Maman" : [" Si tu as un petit creux, on a toujours à manger à la maison tu sais ?"]  
+}],
+"acte3":[{
+"Chef" :["Félicitations","AVANCEE HISTOIRE, A COMPLETER"],
+"Forgeron" : [ "Ca y est ! Je vais pouvoir forger ton épée !","Reviens dans quelques jours pour la récupérer"],
+"Chasseur1" : ["Woah !","Je le sens !","La pêche sera meilleure dans les prochains jours"],
+"Chasseur2" : ["*mange*"],
+"Chasseur3" : ["Bravo ! Quelle chance de t’avoir parmi nous !","C’est l’heure de retourner pêcher ! "],
+"Bucheron" : ["Tout est bien qui finit bien j’ai l’impression"],
+"Papa" : ["C’est terminé ?", "Reviens nous vite !"],
+"Maman" : ["Nos fleurs se sont tout à coup remises à pousser !"]  
+}]
+}

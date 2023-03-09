@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Boss/pngegg.png" type="Texture" id=1]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 1.0
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 1.0
+height = 8.0
+
+[node name="Flèche" type="KinematicBody2D"]
+position = Vector2( 166, 84 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -0.572921, 0 )
+scale = Vector2( 0.0457292, 0.0329167 )
+texture = ExtResource( 1 )
+hframes = 6
+
+[node name="Hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2( 0, -7 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -3 )
+shape = SubResource( 2 )

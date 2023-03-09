@@ -1,0 +1,77 @@
+{
+"intro1":[{
+"count":["4"],
+"Chef1" :["C'est horrible !                                                 (appuyez sur E pour passer)","Comment allons-nous faire à présent ?"],
+"Demetrius1" : [ "L'heure est grave...","Certes", "Mais je vois en l'un d'entre vous un réel potentiel"],
+"Chef2" : ["En es-tu sûr ?","J'ai vraiment peur ce coup-ci"],
+"Game2" :["Déplacez-vous dans le village avec les flèches directionnelles","Vous pouvez interagir avec les villageois en utilisant la touche E"],
+"Game3" :["Pour faire une pause, appuyez sur P"]
+}],
+"intro2":[{
+"count":["4"],
+"Demetrius1" : ["Ta destinée t'attend !","Les créatures du chaos sont de retour","Nous, autres dieux, les croyions disparues à jamais","Mais, après des siècles, je les ressens à nouveau","Laisse-moi t’expliquer ton rôle"],
+"Demetrius2" : ["Les Moires t’ont désigné pour être celui qui devra libérer Artémis","Pour cela, tu devras combattre les créatures du Chaos","Rends-toi à la forêt luxuriante et trouve Artémis"],
+"Demetrius3" : ["Ah j'oubliais!","Prends ceci","Tu en auras besoin"],
+"Game4" : ["*Vous récupérez la Lance Divine*","*Utilisez la barre espace pour l'utiliser*"],
+"Game3" : ["*Vous possédez à présent une arme*"],
+"Demetrius4" : ["Ce n’est malheureusement pas ce que je sais faire de mieux","Mais cette lance te sera utile"],
+"Chef5" : ["Bon courage !","Nous sommes tous avec toi !"]
+}],
+"intro_village":[{
+"Demetrius" :["Nous te faisons tous confiance","Au village, mais bien plus encore..."],
+"Chef" :["C'est la première fois que j'ai affaire à tout ça","J'ai peur..."],
+"Forgeron" : [ "Demetrius a toujours une solution quand ça ne va pas","J'ai confiance en lui"],
+"Chasseur Confirmé" : ["Je n'ai pas très bien dormi cette nuit..."],
+"Chasseur Novice" : ["*a faim*"],
+"Chasseur Expert" : ["Les oiseaux ont changé leur comportement","Je devrais me tenir sur mes gardes..."],
+"Bucheron" : ["Notre village a toujours su affronter les dangers de ce monde"],
+"Papa" : ["Tu n'as pas bien dormi cette nuit ?", "A vrai dire...","Moi non plus","Je ne l'explique pas..."],
+"Maman" : ["Je sens que cette journée va être longue...", "Tu as assez mangé ce matin ?","Tu en es sûr ?"]  
+}],
+"intro_outro_village":[{
+"Demetrius" :[""],
+"Chef" :["Heureusement que tu es là !","Sans toi...","Comment aurions-nous fait ?","Je me le demande..."],
+"Forgeron" : [ "Super !", "Nous avons de nouveau accès à la forêt","Je devrais te forger une belle épée"],
+"Chasseur Confirmé" : ["Merci !","Je devrais mieux dormir cette nuit"],
+"Chasseur Novice" : ["*a encore faim*"],
+"Chasseur Expert" : ["Je savais que tu allais t'en sortir","J'ai bien vu que le comportement des oiseaux avait changé..."],
+"Bucheron" : ["*Chop chop*","Je vais pouvoir me remettre à travailler","*Chop chop*"],
+"Papa" : ["Nous sommes fiers de toi", "Tu devrais aller voir Demetrius","Il saura te récompenser"],
+"Maman" : ["Quand est-ce que tout ça s'arrête ?", "Tu reviens bientôt à la maison ?"]  
+}],
+"outro_village":[{
+"Chef1" :["Félicitations !","C'est incroyable que tu aies réussi si vite !"],
+"Chef2" : [ "Oh !","Je vois qu'Artémis t'a donné son anneau du chasseur","C'est super !","Il paraît qu'il confère un grand pouvoir à celui qui le porte"],
+"Chef3" : ["Jadis, nous avions aussi des anneaux au village","Nous les conservions au niveau de l'autel"],
+"Demetrius3" : ["Tu as réussi ! ", "Artémis est de retour parmi nous !"],
+"Demetrius4" : ["J'ai cru comprendre que tu avais récupéré un anneau divin","Tu peux décider de le garder pour toi...","Ou alors...","En faire offrande au village"],
+"Demetrius5" : ["En revanche...", "Si tu décides de le déposer, tu perdras tous les pouvoirs acquis"],
+"Demetrius6" : ["Alors ?", "Quel est ton choix ?"],
+"Game6" : ["Appuyez sur D pour conserver l'anneau, G pour l'offir au village"]
+}],
+"boss_artemis1":[{
+"Artemis1" :["Attention!","Ne viens pas!","C'est trop dang..."],
+"Game1" : [ "*Artemis se transforme*","*Les créatures du néant ont pris le dessus*"],
+"Neant1" : ["HA HA HA","Et tu crois pouvoir venir nous défier ?","Retourne au village avant qu'il ne soit trop tard"],
+"Neant2" : ["Noooooonnn"],
+"Artemis2" : ["Merci !","Je te serai éternellement reconnaissante","Je n'aurais pas su reprendre le dessus si tu n'étais pas intervenu "],
+"Artemis3" : ["Prends cet arc","Il représente ce que je sais fabriquer de mieux en ce monde"],
+"Game2": [ "*Vous récupérez Arc des Dieux*" ],
+"Game3": [ "*Vous pouvez utiliser cet arc en appuyant sur la touche A*" ],
+"Artemis4": [ "Je te donne aussi cet anneau", "Il concentre un grand pouvoir" ],
+"Game4": [ "*Vous récupérez l'Anneau du Chasseur*"],
+"Artemis5": [ "Les dieux se souviendront de toi"]
+}],
+"outro_D":[{
+"Game1" : [ "Vous avez choisi de garder votre anneau","Vous devenez le Champion Des Dieux"],
+"Game2" : ["Vos compétences surhumaines sont reconnues de tous"],
+"Game3" : ["Vous quittez le village et partez explorer les alentours"],
+"Game4" : ["Grâce à vous, le village se sent en sécurité...","Les villageois n'hésiteront pas à vous appeler s'ils ressentent un nouveau danger"]
+}],
+"outro_G":[{
+"Game1" : [ "Vous avez choisi de donner votre anneau","Vous devenez le Champion Du Village"],
+"Game2" : ["Le village vit à présent en harmonie avec les dieux...","... Comme cela n'a jamais été le cas depuis des siècles"],
+"Game3" : ["Les villageois observent une amélioration conséquente de leur niveau de vie :","Meilleurs rendements agricoles, retour de la vie sauvage dans les environs..."],
+"Game4" : ["Vous décidez de rester vivre au village"]
+}]
+}

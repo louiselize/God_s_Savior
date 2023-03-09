@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Texture/FondDialogue.png" type="Texture" id=1]
+[ext_resource path="res://fin/Dialoguefin_Game.gd" type="Script" id=2]
+[ext_resource path="res://Font/8-bit-operator/8bitOperatorPlus-Regular.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 11
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 11
+font_data = ExtResource( 3 )
+
+[node name="Dialoguefin_Game" type="CanvasLayer"]
+script = ExtResource( 2 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -47.0
+texture = ExtResource( 1 )
+region_rect = Rect2( 29.6958, 15.2846, 65.7379, 50.3991 )
+patch_margin_left = 102
+patch_margin_right = 97
+
+[node name="Name" type="RichTextLabel" parent="NinePatchRect"]
+margin_left = 3.0
+margin_top = -1.0
+margin_right = 101.0
+margin_bottom = 21.0
+custom_colors/default_color = Color( 0.890196, 0.415686, 0.117647, 1 )
+custom_fonts/normal_font = SubResource( 1 )
+text = "Name"
+
+[node name="Message" type="RichTextLabel" parent="NinePatchRect"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -157.0
+margin_top = -37.0
+margin_right = 155.0
+rect_pivot_offset = Vector2( -711, -343 )
+custom_fonts/normal_font = SubResource( 2 )
+text = "Message"
+
+[node name="Timer_G" type="Timer" parent="."]
+wait_time = 0.4
+one_shot = true
+
+[connection signal="timeout" from="Timer_G" to="." method="_on_Timer_G_timeout"]

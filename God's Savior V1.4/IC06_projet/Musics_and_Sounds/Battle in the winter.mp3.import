@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Battle in the winter.mp3-54b5872fd0a65c6bc65f455a0a8f2407.mp3str"
+
+[deps]
+
+source_file="res://Musics_and_Sounds/Battle in the winter.mp3"
+dest_files=[ "res://.import/Battle in the winter.mp3-54b5872fd0a65c6bc65f455a0a8f2407.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Minstrel_Dance.mp3-3ba3844f21ce71acebf29ef23e6604d9.mp3str"
+
+[deps]
+
+source_file="res://Musics_and_Sounds/Minstrel_Dance.mp3"
+dest_files=[ "res://.import/Minstrel_Dance.mp3-3ba3844f21ce71acebf29ef23e6604d9.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

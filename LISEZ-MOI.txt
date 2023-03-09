@@ -1,0 +1,29 @@
+God's Savior
+----------------------------------------------------------------------------------
+
+Merci à toi d'avoir téléchargé la béta de God's Savior et de participer aux tests. Ce jeu entre dans notre projet de l'UV ICO6.
+Ce jeu est un jeu de type aventure-action avec une grande inspiration des jeux Zelda 2D. L'aventure prend place dans un univers inspiré de l'époque antique et de la mythologie grecque.
+
+-----------------------------------------------------------------------------------
+Instructions :
+
+ - Ouvrez le fichier God's Savior V1.4, puis le fichier IC06_projet et lancer l'executable God's Savior.
+ - Le jeu se lance et vous pouvez tester !
+
+-----------------------------------------------------------------------------------
+Commandes :
+
+ - Utiliser les flèches directionnelles ou les touches ZQSD pour vous déplacer.
+ - Utiliser la barre d'espace pour attaquer.
+ - Utiliser la touche E pour intéragir.
+ - Utiliser la touche A pour utiliser une compétence spéciale.
+
+-----------------------------------------------------------------------------------
+Bugs connus :
+
+ - Problèlme d'hitbox dans le premièr monde où le joueur peut se bloquer sans raison apparente.
+ - Problème de dialogue pour le chef où il manque un verbe.
+ - Problème où le joueur attaque à gauche quand l'animation indique à droite. 
+
+
+

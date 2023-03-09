@@ -1,0 +1,115 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Common/DeathScreen.gd" type="Script" id=1]
+[ext_resource path="res://Font/8-bit-operator/8bitOperatorPlusSC-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Font/8-bit-operator/8bitOperatorPlusSC-Bold.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Texture/EcranTitre.png" type="Texture" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 25
+outline_size = 1
+outline_color = Color( 0.34902, 0.168627, 0.168627, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 9
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 9
+font_data = ExtResource( 2 )
+
+[sub_resource type="Animation" id=4]
+resource_name = "death"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("CacheLayer/Cache:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CacheLayer/Cache:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[node name="DeathScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="Background" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -11.0
+margin_right = 71.0
+margin_bottom = 23.0
+texture = ExtResource( 4 )
+expand = true
+
+[node name="Game name" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -120.5
+margin_top = -48.0
+margin_right = 120.5
+margin_bottom = -12.0
+custom_colors/font_outline_modulate = Color( 0.0705882, 0.0941176, 0.521569, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Vous êtes morts"
+
+[node name="Press_E" type="Label" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -5.0
+margin_top = -103.0
+margin_right = -5.0
+margin_bottom = -88.0
+custom_fonts/font = SubResource( 2 )
+text = "Appuyez sur \"E\" pour continuer"
+align = 1
+
+[node name="Quit" type="Label" parent="."]
+margin_left = -11.0
+margin_top = -5.0
+margin_right = 89.0
+margin_bottom = 27.0
+custom_fonts/font = SubResource( 3 )
+text = "Quit (echap)"
+align = 1
+valign = 1
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "death"
+anims/death = SubResource( 4 )
+
+[node name="CacheLayer" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="Cache" type="ColorRect" parent="CacheLayer"]
+margin_left = -186.0
+margin_top = -241.0
+margin_right = 515.0
+margin_bottom = 272.0
+color = Color( 0, 0, 0, 1 )
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

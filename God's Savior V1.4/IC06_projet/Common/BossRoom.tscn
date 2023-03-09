@@ -1,0 +1,748 @@
+[gd_scene load_steps=47 format=2]
+
+[ext_resource path="res://Texture/TX Tileset Wall Temple v1.1.png" type="Texture" id=1]
+[ext_resource path="res://Texture/TX Tileset Stone Ground Temple Back.png" type="Texture" id=2]
+[ext_resource path="res://Texture/TX Tileset Ground Temple.png" type="Texture" id=3]
+[ext_resource path="res://Boss/Boss.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Common/Player_cam.gd" type="Script" id=6]
+[ext_resource path="res://UI/Heart_UI.tscn" type="PackedScene" id=7]
+[ext_resource path="res://UI/Heart_UI.gd" type="Script" id=8]
+[ext_resource path="res://Common/Leaving_area_bossRoom.gd" type="Script" id=9]
+[ext_resource path="res://Common/BossRoom.gd" type="Script" id=10]
+[ext_resource path="res://Boss/Dialogue_Artemis.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Boss/artemis.gd" type="Script" id=12]
+[ext_resource path="res://Boss/Dialogue_Game.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Boss/Dialogue_Neant.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Boss/Artémis.png" type="Texture" id=15]
+[ext_resource path="res://Screens/PauseScreen.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Musics_and_Sounds/Battle in the winter.mp3" type="AudioStream" id=17]
+
+[sub_resource type="TileSet" id=1]
+0/name = "TX Tileset Stone Ground Temple Back.png 0"
+0/texture = ExtResource( 2 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 32, 32 )
+0/tile_mode = 1
+0/autotile/bitmask_mode = 1
+0/autotile/bitmask_flags = [  ]
+0/autotile/icon_coordinate = Vector2( 0, 0 )
+0/autotile/tile_size = Vector2( 32, 32 )
+0/autotile/spacing = 0
+0/autotile/occluder_map = [  ]
+0/autotile/navpoly_map = [  ]
+0/autotile/priority_map = [  ]
+0/autotile/z_index_map = [  ]
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
+[sub_resource type="ConvexPolygonShape2D" id=20]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=21]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=22]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=23]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=24]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=25]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=26]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=27]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=28]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=29]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=30]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=31]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=32]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=33]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=34]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=35]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=36]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=37]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=38]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=39]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=40]
+points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
+
+[sub_resource type="TileSet" id=19]
+0/name = "TX Tileset Wall Temple v1.1.png 0"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 96, 96 )
+0/tile_mode = 2
+0/autotile/icon_coordinate = Vector2( 0, 0 )
+0/autotile/tile_size = Vector2( 32, 32 )
+0/autotile/spacing = 0
+0/autotile/occluder_map = [  ]
+0/autotile/navpoly_map = [  ]
+0/autotile/priority_map = [  ]
+0/autotile/z_index_map = [  ]
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 20 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 20 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 1, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 21 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 2, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 22 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 1 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 23 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 1, 1 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 24 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 2, 1 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 25 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 2 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 26 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 1, 2 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 27 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 2, 2 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 28 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "TX Tileset Wall Temple v1.1.png 1"
+1/texture = ExtResource( 1 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 96, 96, 128 )
+1/tile_mode = 2
+1/autotile/icon_coordinate = Vector2( 0, 0 )
+1/autotile/tile_size = Vector2( 32, 32 )
+1/autotile/spacing = 0
+1/autotile/occluder_map = [  ]
+1/autotile/navpoly_map = [  ]
+1/autotile/priority_map = [  ]
+1/autotile/z_index_map = [  ]
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 29 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 29 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 1, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 30 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 2, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 31 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 1 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 32 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 1, 1 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 33 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 2, 1 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 34 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 2, 2 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 35 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 1, 2 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 36 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 2 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 37 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 3 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 38 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 1, 3 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 39 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 2, 3 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 40 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
+
+[sub_resource type="RectangleShape2D" id=41]
+extents = Vector2( 30.5, 7.5 )
+
+[sub_resource type="Animation" id=42]
+resource_name = "Entrée"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Player:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 200 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CacheLayer/Cache:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("Player")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [ false ],
+"method": "set_active"
+}, {
+"args": [ true ],
+"method": "set_active"
+} ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("CacheLayer/Cache:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 2 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=43]
+resource_name = "Sortie"
+tracks/0/type = "value"
+tracks/0/path = NodePath("CacheLayer/Cache:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("CacheLayer/Cache:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("Player")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ false ],
+"method": "set_active_diag"
+} ]
+}
+
+[sub_resource type="Animation" id=44]
+resource_name = "intro_artemis"
+length = 12.0
+tracks/0/type = "method"
+tracks/0/path = NodePath("artemis")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 4.5, 6.4, 6.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"values": [ {
+"args": [ 1, "Artemis", 1 ],
+"method": "find_and_use_dialogue"
+}, {
+"args": [ 1, "Game", 1 ],
+"method": "find_and_use_dialogue"
+}, {
+"args": [ 1, "Neant", 1 ],
+"method": "find_and_use_dialogue"
+} ]
+}
+tracks/1/type = "method"
+tracks/1/path = NodePath("Player")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 12 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [ false ],
+"method": "set_active"
+}, {
+"args": [ true ],
+"method": "set_active"
+} ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("artemis/travelling_artemis/PathFollow2D/cam_intro:current")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 12 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Player/Player_cam:current")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 12 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("artemis/travelling_artemis/PathFollow2D:unit_offset")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 4, 7, 11 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0, 1.0, 0.0 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Artemis:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 5, 5.2, 5.4, 5.6, 5.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true, false, true, false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Boss:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 5, 5.2, 5.4, 5.6, 5.8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false, true, false, true ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Artemis:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.8, 1.6, 2.4, 3.2, 4, 4.8, 5.6, 6.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -15 ), Vector2( 0, 0 ), Vector2( 0, -15 ), Vector2( 0, 0 ), Vector2( 0, -15 ), Vector2( 0, 0 ), Vector2( 0, -15 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=45]
+resource_name = "outro_artemis"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("CacheLayer/Cache:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2, 3, 5, 6, 7, 8 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Player:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 100 ) ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath("Player")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 1, 8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"values": [ {
+"args": [ false ],
+"method": "set_active"
+}, {
+"args": [ true ],
+"method": "set_active"
+} ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("CacheLayer/Cache:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("artemis/Cam_outro:current")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 1, 6.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/5/type = "method"
+tracks/5/path = NodePath("artemis")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 3.5, 3.6, 3.7, 3.8, 3.9, 4, 4.1, 4.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"values": [ {
+"args": [ 1, "Neant", 2 ],
+"method": "find_and_use_dialogue"
+}, {
+"args": [ 1, "Artemis", 2 ],
+"method": "find_and_use_dialogue"
+}, {
+"args": [ 1, "Artemis", 3 ],
+"method": "find_and_use_dialogue"
+}, {
+"args": [ 1, "Game", 2 ],
+"method": "find_and_use_dialogue"
+}, {
+"args": [ 1, "Game", 3 ],
+"method": "find_and_use_dialogue"
+}, {
+"args": [ 1, "Artemis", 4 ],
+"method": "find_and_use_dialogue"
+}, {
+"args": [ 1, "Game", 4 ],
+"method": "find_and_use_dialogue"
+}, {
+"args": [ 1, "Artemis", 5 ],
+"method": "find_and_use_dialogue"
+} ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Player/Player_cam:current")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 1, 6.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Artemis:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 2 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/8/type = "method"
+tracks/8/path = NodePath("Player")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 8 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [ true ],
+"method": "tir_enable"
+} ]
+}
+
+[sub_resource type="Curve2D" id=46]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 0, 200, 0, 0, 0, 0, 0, 0 )
+}
+
+[node name="BossRoom" type="YSort"]
+script = ExtResource( 10 )
+
+[node name="Background" type="Sprite" parent="."]
+show_behind_parent = true
+position = Vector2( 0, 38 )
+scale = Vector2( 1, 1.152 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 600, 600 )
+
+[node name="Fond_Mur" type="TileMap" parent="."]
+tile_set = SubResource( 1 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( -393223, 0, 0, -393222, 0, 0, -393221, 0, 0, -393220, 0, 0, -393219, 0, 0, -393218, 0, 0, -393217, 0, 0, -458752, 0, 0, -458751, 0, 0, -458750, 0, 0, -458749, 0, 0, -458748, 0, 0, -458747, 0, 0, -458746, 0, 0, -327687, 0, 0, -327686, 0, 0, -393211, 0, 0, -393210, 0, 0, -262151, 0, 0, -262150, 0, 0, -327675, 0, 0, -327674, 0, 0, -196615, 0, 0, -196614, 0, 0, -262139, 0, 0, -262138, 0, 0, -131079, 0, 0, -131078, 0, 0, -196603, 0, 0, -196602, 0, 0, -65543, 0, 0, -65542, 0, 0, -131067, 0, 0, -131066, 0, 0, -7, 0, 0, -6, 0, 0, -65531, 0, 0, -65530, 0, 0, 65529, 0, 0, 65530, 0, 0, 5, 0, 0, 6, 0, 0, 131065, 0, 0, 131066, 0, 0, 65541, 0, 0, 65542, 0, 0, 196601, 0, 0, 196602, 0, 0, 131077, 0, 0, 131078, 0, 0, 262137, 0, 0, 262138, 0, 0, 196613, 0, 0, 196614, 0, 0, 327673, 0, 0, 327674, 0, 0, 262149, 0, 0, 262150, 0, 0, 393209, 0, 0, 393210, 0, 0, 393211, 0, 0, 393212, 0, 0, 393213, 0, 0, 393214, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 0, 0 )
+
+[node name="Mur" type="TileMap" parent="."]
+tile_set = SubResource( 19 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( -393223, 0, 0, -393222, 1, 196609, -393221, 1, 196609, -393220, 1, 196609, -393219, 1, 196609, -393218, 1, 196609, -393217, 1, 196609, -458752, 1, 196609, -458751, 1, 196609, -458750, 1, 196609, -458749, 1, 196609, -458748, 1, 196609, -458747, 1, 196609, -458746, 0, 2, -327687, 1, 65537, -327686, 1, 0, -327685, 1, 131072, -327684, 1, 131072, -327683, 1, 131072, -327682, 1, 131072, -327681, 1, 131072, -393216, 1, 131072, -393215, 1, 131072, -393214, 1, 131072, -393213, 1, 131072, -393212, 1, 131072, -393211, 1, 65536, -393210, 1, 1, -262151, 1, 65537, -262150, 1, 1, -262149, 1, 196608, -262148, 1, 196608, -262147, 1, 196608, -262146, 1, 196608, -262145, 1, 196608, -327680, 1, 196608, -327679, 1, 196608, -327678, 1, 196608, -327677, 1, 196608, -327676, 1, 196608, -327675, 1, 65537, -327674, 1, 1, -196615, 1, 65537, -196614, 1, 1, -262139, 1, 65537, -262138, 1, 1, -131079, 1, 65537, -131078, 1, 1, -196603, 1, 65537, -196602, 1, 1, -65543, 1, 65537, -65542, 1, 1, -131067, 1, 65537, -131066, 1, 1, -7, 1, 65537, -6, 1, 1, -65531, 1, 65537, -65530, 1, 1, 65529, 1, 65537, 65530, 1, 1, 5, 1, 65537, 6, 1, 1, 131065, 1, 65537, 131066, 1, 1, 65541, 1, 65537, 65542, 1, 1, 196601, 1, 65537, 196602, 1, 1, 131077, 1, 65537, 131078, 1, 1, 262137, 1, 65537, 262138, 1, 1, 196613, 1, 65537, 196614, 1, 1, 327673, 1, 65537, 327674, 1, 1, 262149, 1, 65537, 262150, 1, 1, 393209, 1, 65537, 393210, 1, 2, 393211, 0, 1, 393212, 0, 1, 393213, 0, 1, 393214, 0, 2, 327681, 0, 0, 327682, 0, 1, 327683, 0, 1, 327684, 0, 1, 327685, 1, 65538, 327686, 1, 1, 458745, 0, 65536, 458746, 0, 65537, 458747, 0, 65537, 458748, 0, 65537, 458749, 0, 65537, 458750, 0, 65538, 393217, 0, 65536, 393218, 0, 65537, 393219, 0, 65537, 393220, 0, 65537, 393221, 0, 65537, 393222, 0, 65538, 524281, 0, 131072, 524282, 0, 131073, 524283, 0, 131073, 524284, 0, 131073, 524285, 0, 131073, 524286, 0, 131074, 458753, 0, 131072, 458754, 0, 131073, 458755, 0, 131073, 458756, 0, 131073, 458757, 0, 131073, 458758, 0, 131074, 589822, 1, 196610, 589823, 1, 196610, 524288, 1, 196610, 524289, 1, 196610 )
+
+[node name="Artemis" type="Sprite" parent="."]
+texture = ExtResource( 15 )
+
+[node name="Boss" parent="." instance=ExtResource( 4 )]
+visible = false
+z_index = 1
+
+[node name="Player" parent="." instance=ExtResource( 5 )]
+position = Vector2( 0, 100 )
+z_index = 1
+
+[node name="Player_cam" type="Camera2D" parent="Player"]
+process_mode = 0
+smoothing_enabled = true
+script = ExtResource( 6 )
+
+[node name="Interface" type="CanvasLayer" parent="."]
+
+[node name="Heart_UI" parent="Interface" instance=ExtResource( 7 )]
+margin_left = 4.0
+margin_top = 3.0
+margin_right = 44.0
+margin_bottom = 43.0
+script = ExtResource( 8 )
+
+[node name="Leaving_area_bossRoom" type="Area2D" parent="."]
+script = ExtResource( 9 )
+
+[node name="Leaving_collision" type="CollisionShape2D" parent="Leaving_area_bossRoom"]
+position = Vector2( 0, 245.5 )
+shape = SubResource( 41 )
+
+[node name="Entrée_Sortie" type="AnimationPlayer" parent="."]
+"anims/Entrée" = SubResource( 42 )
+anims/Sortie = SubResource( 43 )
+
+[node name="CacheLayer" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="Cache" type="ColorRect" parent="CacheLayer"]
+margin_left = -186.0
+margin_top = -241.0
+margin_right = 515.0
+margin_bottom = 272.0
+color = Color( 0, 0, 0, 0 )
+
+[node name="artemis" type="AnimationPlayer" parent="."]
+anims/intro_artemis = SubResource( 44 )
+anims/outro_artemis = SubResource( 45 )
+script = ExtResource( 12 )
+
+[node name="travelling_artemis" type="Path2D" parent="artemis"]
+curve = SubResource( 46 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="artemis/travelling_artemis"]
+position = Vector2( 0, 200 )
+rotation = -1.5708
+
+[node name="cam_intro" type="Camera2D" parent="artemis/travelling_artemis/PathFollow2D"]
+current = true
+
+[node name="Cam_outro" type="Camera2D" parent="artemis"]
+offset = Vector2( 0, 50 )
+
+[node name="Dialogue_Game" parent="artemis" instance=ExtResource( 13 )]
+dialogue_file = "res://Intro/dialoguesINTRO.json"
+
+[node name="Dialogue_Neant" parent="artemis" instance=ExtResource( 14 )]
+dialogue_file = "res://Intro/dialoguesINTRO.json"
+
+[node name="Dialogue_Artemis" parent="artemis" instance=ExtResource( 11 )]
+dialogue_file = "res://Intro/dialoguesINTRO.json"
+
+[node name="PauseScreen" type="CanvasLayer" parent="."]
+pause_mode = 2
+
+[node name="PauseScreen" parent="PauseScreen" instance=ExtResource( 16 )]
+
+[node name="MusicBoss" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 17 )
+
+[connection signal="boss_dead" from="Boss" to="." method="_on_Boss_boss_dead"]
+[connection signal="animation_finished" from="Entrée_Sortie" to="Leaving_area_bossRoom" method="_on_Entre_Sortie_animation_finished"]
+[connection signal="animation_finished" from="Entrée_Sortie" to="artemis" method="_on_Entre_Sortie_animation_finished" flags=6]
